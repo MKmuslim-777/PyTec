@@ -43,6 +43,7 @@ pkg update -y && pkg upgrade -y
 pkg install python -y
 pkg install git -y
 pkg install wget -y
+pip install requests
 git clone https://github.com/yourusername/PyTec.git
 cd PyTec
 python PyTec.py
@@ -55,6 +56,7 @@ sudo apt update && sudo apt upgrade -y
 sudo apt install python3 -y
 sudo apt install git -y
 sudo apt install wget -y
+pip3 install requests
 git clone https://github.com/yourusername/PyTec.git
 cd PyTec
 python3 PyTec.py
