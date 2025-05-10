@@ -1,7 +1,9 @@
-<!-- ANIMATED HEADER -->
-<h1 align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=30&duration=3000&pause=1000&color=58A6FF&center=true&vCenter=true&width=600&height=80&lines=⚡+PyTec+-+Elite+Cyber+Toolkit+⚡;🔐+Ethical+Hacking+Essentials;🚀+Power+Tools+for+Security+Pros" alt="Header">
-</h1>
+<h1 align="center">⚡ PyTec - Multifunctional Cyber Toolkit ⚡</h1>
+
+<p align="center">
+  <b>Made with ❤️ by ★彡[𝐌𝐔𝐒𝐋𝐈𝐌 𝐔𝐃𝐃𝐈𝐍 𝐌𝐊]彡★</b><br>
+  <i>🚀 An all-in-one cyber toolkit for ethical hackers and learners in 🇧🇩</i>
+</p>
 
 <!-- BADGES -->
 <p align="center">
@@ -11,35 +13,91 @@
   <img src="https://img.shields.io/badge/Platforms-Windows%20%7C%20Linux%20%7C%20Termux-success?style=for-the-badge&logo=linux">
 </p>
 
-<!-- DESCRIPTION -->
+
 <p align="center">
-  <b>🔥 Developed by ★彡[𝐌𝐔𝐒𝐋𝐈𝐌 𝐔𝐃𝐃𝐈𝐍 𝐌𝐊]彡★ 🔥</b><br>
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=14&duration=4000&pause=1000&color=58A6FF&center=true&width=600&lines=A+complete+cybersecurity+suite+for+ethical+hacking;Trusted+by+10%2C000%2B+security+professionals" alt="Description">
+  <img src="banner.gif" width="600px" alt="PyTec Main Banner">
 </p>
 
-<!-- BANNER -->
-<div align="center">
-  <img src="https://github.com/MK-777/PyTec/raw/main/assets/banner.png" width="800">
-</div>
+---
 
-<!-- TOOLS TABLE -->
-## 🛠️ Features
+## ✨ Features
 
-| ID  | Tool Name          | Description | Status |
-|-----|--------------------|-------------|--------|
-| [1] | **SMS Commander**  | Advanced SMS flooding | 🔄 Beta |
-| [2] | **QR Architect**   | Custom QR codes | ✅ Stable |
-| [3] | **URL Alchemist**  | URL shortening | ✅ Stable |
-| [4] | **SMS Spoofer**    | Custom messages | 🛠️ WIP |
-| [5] | **Site Mirror**    | Website cloning | ✅ Stable |
-| [6] | **NetStress**      | DDoS toolkit | ⚠️ Expert |
-| [7] | **Admin Hunter**   | Panel finder | ✅ Stable |
+| 🔢 Option | 🛠️ Tool Name          | 📄 Description                                 |
+|----------|------------------------|-----------------------------------------------|
+| [1]      | 📱 SMS Bomber          | Send multiple OTPs to a number *(Updating)*    |
+| [2]      | 🔳 QR Code Generator   | Create stylish and custom QR codes             |
+| [3]      | 🔗 URL Shortener       | Shrink long URLs using TinyURL API             |
+| [4]      | 💬 Custom SMS          | Send personalized messages *(Updating)*        |
+| [5]      | 🌐 Web Cloner          | Clone and display target website's HTML code   |
+| [6]      | 💣 DDoS Attack         | Medium & High-Level UDP Flood tools            |
+| [7]      | 🔐 Admin Panel Finder  | Scan sites for hidden admin login panels       |
 
-<!-- INSTALLATION -->
-## 🚀 Installation
+---
+
+## ⚙️ Installation
+
+### 📱 Termux Users
 
 ```bash
-git clone https://github.com/MK-777/PyTec.git
+pkg update -y && pkg upgrade -y
+pkg install python -y
+pkg install git -y
+pkg install wget -y
+git clone https://github.com/yourusername/PyTec.git
 cd PyTec
-pip install -r requirements.txt
 python PyTec.py
+```
+
+### 🐧 Kali Linux Users
+
+```bash
+sudo apt update && sudo apt upgrade -y
+sudo apt install python3 -y
+sudo apt install git -y
+sudo apt install wget -y
+git clone https://github.com/yourusername/PyTec.git
+cd PyTec
+python3 PyTec.py
+```
+
+### 📦 Dependencies
+
+```bash
+pip install requests pyshorteners qrcode
+```
+
+---
+
+## 🔐 Login Info
+
+🔑 *Contact the Admin to get your Username & Password.*
+
+---
+
+## 🖼️ Banner
+
+### 🎞️ PyTec Tools Main Banner
+
+<img src="banner.gif" width="500px" alt="Main Banner Preview">
+
+---
+
+## ⚠️ Disclaimer
+
+> ⚠️ PyTec is built for **educational and ethical purposes only**. Any misuse is strictly discouraged. The developer is **not responsible** for unethical usage.
+
+---
+
+## 👨‍💻 Developer Info
+
+- 👤 **Name:** Muslim Uddin MK  
+- 🌐 **Website:** [mk777.rf.gd](http://mk777.rf.gd/?i=1)  
+- 📘 **Facebook:** [Profile](https://www.facebook.com/profile.php?id=100077752513671)
+
+---
+
+## 🌟 Special Thanks
+
+🙏 Huge thanks to all testers, friends, and supporters who inspired the development journey.
+
+<p align="center"><b>💖 STAY WITH MK-777 💖</b></p>
