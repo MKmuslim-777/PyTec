@@ -15,7 +15,7 @@
 
 
 <p align="center">
-  <img src="banner.gif" width="600px" alt="PyTec Main Banner">
+  <img src="banner.webp" width="600px" alt="PyTec Main Banner">
 </p>
 
 ---
